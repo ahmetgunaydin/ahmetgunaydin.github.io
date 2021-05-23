@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.7ab0348d2bb830eecac9d36e17893875.js"
+  "precache-manifest.d58257cf943e4353ed446bf08733dd3a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "randevu-ui"});
