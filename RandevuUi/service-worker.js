@@ -1,4 +1,4 @@
-importScripts("precache-manifest.c7eac79a6b4a3f3c5cff2d55d34c10a8.js", "workbox-v4.3.1/workbox-sw.js");
+importScripts("precache-manifest.2623d131858f81a51b71bfdfb59628f8.js", "workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "workbox-v4.3.1"});
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
@@ -8,7 +8,7 @@ workbox.setConfig({modulePathPrefix: "workbox-v4.3.1"});
 
 
 self.addEventListener("message", (e) => {
-  
+
   if (!e.data) {
     return;
   }
@@ -18,40 +18,40 @@ self.addEventListener("message", (e) => {
       self.skipWaiting();
       console.log("skipWaiting");
       break;
+    case "notification":
+
+      self.showNotification("SIRA AL", {
+        body: "SIRA AL",
+        icon: "./img/icons/android-chrome-512x512.png",
+        vibrate: [200, 100, 200, 100, 200, 100, 200],
+        tag: "vibration-sample",
+        timestamp: new Date().setMinutes(new Date().getMinutes() + 42)
+      });
+      console.log("bildirim")
+
+      break;
     default:
       // NOOP
       break;
   }
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', function (event) {
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then(function (cacheNames) {
       return Promise.all(
-        cacheNames.filter(function(cacheName) {
-         
+        cacheNames.filter(function (cacheName) {
+
           console.log(cacheName, "siliniyor sw...")
           return true;
-        }).map(function(cacheName) {
+        }).map(function (cacheName) {
           return caches.delete(cacheName);
         })
       );
     })
   );
 
-  navigator.serviceWorker.ready.then(function (registration) {
-    //alert("bildirim kaydedildi");
-    setInterval(() => {
-      registration.showNotification("SIRA AL", {
-        body: "SIRA AL",
-        icon: "./img/icons/android-chrome-512x512.png",
-        vibrate: [200, 100, 200, 100, 200, 100, 200],
-        tag: "vibration-sample",
-        timestamp:new Date().setMinutes(new Date().getMinutes()+42)
-      });
-      console.log("bildirim")
-    }, 30000);
-  });
+ 
 });
 
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
