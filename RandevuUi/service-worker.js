@@ -39,15 +39,21 @@ self.addEventListener('activate', function (event) {
       );
     })
   );
-  
+
   setInterval(() => {
-    self.showNotification("SIRA AL", {
-      body: "SIRA AL",
-      icon: "./img/icons/android-chrome-512x512.png",
-      vibrate: [200, 100, 200, 100, 200, 100, 200],
-      tag: "vibration-sample",
-      timestamp: new Date().setMinutes(new Date().getMinutes() + 42)
-    });
+    navigator.serviceWorker.ready.then(function (registration) {
+        alert("bildirim kaydedildi");
+       // setTimeout(() => {
+          registration.showNotification("SIRA AL", {
+            body: "SIRA AL",
+            icon: "./img/icons/android-chrome-512x512.png",
+            vibrate: [200, 100, 200, 100, 200, 100, 200],
+            tag: "vibration-sample",
+            timestamp:new Date().setMinutes(new Date().getMinutes()+42)
+          });
+          console.log("bildirim")
+       // }, 120000);
+      });
     console.log("bildirim")
   }, 10000);
 
