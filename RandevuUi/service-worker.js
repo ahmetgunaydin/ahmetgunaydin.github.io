@@ -1,4 +1,4 @@
-importScripts("precache-manifest.8a4192d252f5721eb33c1831d6b01e98.js", "workbox-v4.3.1/workbox-sw.js");
+importScripts("precache-manifest.6d4cc4f0ce6b844c54b540ed9b775bab.js", "workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "workbox-v4.3.1"});
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
@@ -39,23 +39,9 @@ self.addEventListener('activate', function (event) {
       );
     })
   );
+  event.waitUntil( console.log(self,"wait until"));
+  console.log(self,"activate");
 
-  setInterval(() => {
-    navigator.serviceWorker.ready.then(function (registration) {
-        alert("bildirim kaydedildi");
-       // setTimeout(() => {
-          registration.showNotification("SIRA AL", {
-            body: "SIRA AL",
-            icon: "./img/icons/android-chrome-512x512.png",
-            vibrate: [200, 100, 200, 100, 200, 100, 200],
-            tag: "vibration-sample",
-            timestamp:new Date().setMinutes(new Date().getMinutes()+42)
-          });
-          console.log("bildirim")
-       // }, 120000);
-      });
-    console.log("bildirim")
-  }, 10000);
 
 });
 
