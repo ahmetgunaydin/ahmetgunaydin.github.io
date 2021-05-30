@@ -5,6 +5,8 @@ workbox.setConfig({modulePathPrefix: "workbox-v4.3.1"});
 // This is the code piece that GenerateSW mode can't provide for us.
 // This code listens for the user's confirmation to update the app.
 
+
+
 self.addEventListener("message", (e) => {
   
   if (!e.data) {
@@ -36,6 +38,20 @@ self.addEventListener('activate', function(event) {
       );
     })
   );
+
+  navigator.serviceWorker.ready.then(function (registration) {
+    //alert("bildirim kaydedildi");
+    setInterval(() => {
+      registration.showNotification("SIRA AL", {
+        body: "SIRA AL",
+        icon: "./img/icons/android-chrome-512x512.png",
+        vibrate: [200, 100, 200, 100, 200, 100, 200],
+        tag: "vibration-sample",
+        timestamp:new Date().setMinutes(new Date().getMinutes()+42)
+      });
+      console.log("bildirim")
+    }, 30000);
+  });
 });
 
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
