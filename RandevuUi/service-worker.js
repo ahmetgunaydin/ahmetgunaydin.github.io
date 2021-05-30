@@ -44,6 +44,11 @@ self.addEventListener('activate', function (event) {
 
 
 });
+self.addEventListener('ready', function (event) {
+ console.log("readyreadyready",event,self)
+
+
+});
 
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
 // workbox.clientsClaim(); // Vue CLI 3 and Workbox v3.
