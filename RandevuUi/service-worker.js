@@ -1,4 +1,4 @@
-importScripts("precache-manifest.512a9ad4d531d9bd8a8e7196a85c0b20.js", "workbox-v4.3.1/workbox-sw.js");
+importScripts("precache-manifest.8a4192d252f5721eb33c1831d6b01e98.js", "workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "workbox-v4.3.1"});
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
@@ -18,18 +18,7 @@ self.addEventListener("message", (e) => {
       self.skipWaiting();
       console.log("skipWaiting");
       break;
-    case "notification":
 
-      self.showNotification("SIRA AL", {
-        body: "SIRA AL",
-        icon: "./img/icons/android-chrome-512x512.png",
-        vibrate: [200, 100, 200, 100, 200, 100, 200],
-        tag: "vibration-sample",
-        timestamp: new Date().setMinutes(new Date().getMinutes() + 42)
-      });
-      console.log("bildirim")
-
-      break;
     default:
       // NOOP
       break;
@@ -50,8 +39,18 @@ self.addEventListener('activate', function (event) {
       );
     })
   );
+  
+  setInterval(() => {
+    self.showNotification("SIRA AL", {
+      body: "SIRA AL",
+      icon: "./img/icons/android-chrome-512x512.png",
+      vibrate: [200, 100, 200, 100, 200, 100, 200],
+      tag: "vibration-sample",
+      timestamp: new Date().setMinutes(new Date().getMinutes() + 42)
+    });
+    console.log("bildirim")
+  }, 10000);
 
- 
 });
 
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
