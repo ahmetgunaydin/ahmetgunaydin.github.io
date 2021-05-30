@@ -1,10 +1,10 @@
-importScripts("precache-manifest.e4e63eeb75f95483c1d944ecb66d13a6.js", "workbox-v4.3.1/workbox-sw.js");
+importScripts("precache-manifest.f0960e3d7b3bfe64eda4c1824b5d02d2.js", "workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "workbox-v4.3.1"});
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
 // This is the code piece that GenerateSW mode can't provide for us.
 // This code listens for the user's confirmation to update the app.
-console.log("local sw")
+
 self.addEventListener("message", (e) => {
   
   if (!e.data) {
@@ -14,11 +14,28 @@ self.addEventListener("message", (e) => {
   switch (e.data) {
     case "skipWaiting":
       self.skipWaiting();
+      console.log("skipWaiting");
       break;
     default:
       // NOOP
       break;
   }
+});
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+         
+          console.log(cacheName, "siliniyor sw...")
+          return true;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
 });
 
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
