@@ -44,6 +44,22 @@ self.addEventListener('activate', function (event) {
 
 });
 
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+
+  const title = 'Push Codelab';
+  const options = {
+    body: "SIRA AL",
+    icon: "./img/icons/android-chrome-512x512.png",
+    vibrate: [200, 100, 200, 100, 200, 100, 200],
+    tag: "vibration-sample",
+    timestamp:new Date().setMinutes(new Date().getMinutes()+42)
+  };
+
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
 // workbox.clientsClaim(); // Vue CLI 3 and Workbox v3.
 
