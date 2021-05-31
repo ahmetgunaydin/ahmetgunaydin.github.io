@@ -39,13 +39,7 @@ self.addEventListener('activate', function (event) {
       );
     })
   );
-  event.waitUntil( console.log(self,"wait until"));
-  console.log(self,"activate");
-
-
-});
-self.addEventListener('ready', function (event) {
- console.log("readyreadyready",event,self)
+ 
 
 
 });
