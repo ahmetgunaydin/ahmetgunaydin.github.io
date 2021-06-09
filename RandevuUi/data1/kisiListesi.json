@@ -1,7 +1,0 @@
-[
-    { "id": 1, "yakinlik": "kendisi", "name": "Kişi 1" },
-    { "id": 2, "yakinlik": "kızı", "name": "Kişi 2" },
-    { "id": 3, "yakinlik": "eşi", "name": "Kişi 3" },
-    { "id": 4, "yakinlik": "annesi", "name": "Kişi 4" },
-    { "id": 5, "yakinlik": "babası", "name": "Kişi 5" }
-  ]
