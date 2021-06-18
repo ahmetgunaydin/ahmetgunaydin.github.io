@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4da2203c13df7786aba3",
-    "url": "css/app.c1c780c5.css"
+    "revision": "da6a9b9b4135d6a03773",
+    "url": "css/app.35b7d600.css"
   },
   {
-    "revision": "850c89f2ccdf2d9f84e3",
+    "revision": "17732c6edceb2de157f4",
     "url": "css/chunk-vendors.867611fc.css"
   },
   {
@@ -46,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7a44ea195f395e1d086010e44555a5c4",
     "url": "fonts/materialdesignicons-webfont.7a44ea19.woff2"
+  },
+  {
+    "revision": "d1aa58ff793ddf913fb1063a5be0883a",
+    "url": "img/Logo.svg"
   },
   {
     "revision": "746f9bbaeea5e00d5c6f61a44a206eac",
@@ -100,7 +104,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/sss.png"
   },
   {
-    "revision": "7d69eea53f7edbc7cd3abc5eb1c47cba",
+    "revision": "9282ff5f9c4ad8b66895638788c0521d",
+    "url": "img/turkuaz.png"
+  },
+  {
+    "revision": "7df1931d8bc195bec34ebcc8f7cc84b7",
     "url": "index.html"
   },
   {
@@ -108,12 +116,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/about.8809ebc1.js"
   },
   {
-    "revision": "4da2203c13df7786aba3",
-    "url": "js/app.366af844.js"
+    "revision": "da6a9b9b4135d6a03773",
+    "url": "js/app.4334353e.js"
   },
   {
-    "revision": "850c89f2ccdf2d9f84e3",
-    "url": "js/chunk-vendors.46ca5f46.js"
+    "revision": "17732c6edceb2de157f4",
+    "url": "js/chunk-vendors.f62aadd9.js"
   },
   {
     "revision": "af45f8106e9cf0c348e0cb926688bbef",
