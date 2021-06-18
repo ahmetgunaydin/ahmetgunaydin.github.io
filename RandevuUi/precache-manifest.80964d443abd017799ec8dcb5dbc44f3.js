@@ -48,10 +48,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "fonts/materialdesignicons-webfont.7a44ea19.woff2"
   },
   {
-    "revision": "d1aa58ff793ddf913fb1063a5be0883a",
-    "url": "img/Logo.svg"
-  },
-  {
     "revision": "746f9bbaeea5e00d5c6f61a44a206eac",
     "url": "img/basvuru_ucretleri_diger.png"
   },
@@ -74,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "82b9c7a5a3f405032b1db71a25f67021",
     "url": "img/logo.82b9c7a5.png"
+  },
+  {
+    "revision": "d1aa58ff793ddf913fb1063a5be0883a",
+    "url": "img/logo.svg"
   },
   {
     "revision": "80811a6bdbb817670af758dfa78c9561",
