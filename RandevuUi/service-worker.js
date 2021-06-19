@@ -1,4 +1,4 @@
-importScripts("precache-manifest.6d4cc4f0ce6b844c54b540ed9b775bab.js", "workbox-v4.3.1/workbox-sw.js");
+importScripts("precache-manifest.6fd6a2b345239b04a503130f56e3a71c.js", "workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "workbox-v4.3.1"});
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
@@ -16,7 +16,7 @@ self.addEventListener("message", (e) => {
   switch (e.data) {
     case "skipWaiting":
       self.skipWaiting();
-      console.log("skipWaiting");
+     
       break;
 
     default:
@@ -39,15 +39,33 @@ self.addEventListener('activate', function (event) {
       );
     })
   );
-  event.waitUntil( console.log(self,"wait until"));
-  console.log(self,"activate");
+ 
 
 
 });
-self.addEventListener('ready', function (event) {
- console.log("readyreadyready",event,self)
+self.addEventListener('notificationclick', event => {
+  event.waitUntil(self.clients.openWindow('/'));
+});
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log(`[Service Worker] Push had this data: `,event.data);
+  const timestamp = new Date().getTime() + 10 * 1000;
+  const title = 'Push Codelab';
+  const options = {
+    body: "SIRA AL",
+    showTrigger: new TimestampTrigger(timestamp),
+    icon: "./img/icons/android-chrome-512x512.png",
+    vibrate: [200, 100, 200, 100, 200, 100, 200],
+    tag: "vibration-sample",
+    timestamp:new Date().getTime() + 120 * 1000
+  };
 
+  event.waitUntil(setTimeout(() => {
+     self.registration.showNotification(title, options)
+  }, parseInt(event.data.text())+1));
 
+  
+  
 });
 
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
