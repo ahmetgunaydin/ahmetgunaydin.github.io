@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f9d184d7256864271d2",
-    "url": "css/app.043ccb02.css"
+    "revision": "0cdd512ed6442cb41ebc",
+    "url": "css/app.69c94be9.css"
   },
   {
     "revision": "17732c6edceb2de157f4",
@@ -112,7 +112,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/turkuaz.png"
   },
   {
-    "revision": "d19e81b505eb9b09083de781e517ac52",
+    "revision": "ce671625f0999d929eaad7dc71267652",
     "url": "index.html"
   },
   {
@@ -120,8 +120,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/about.544859fb.js"
   },
   {
-    "revision": "1f9d184d7256864271d2",
-    "url": "js/app.23e3a3f0.js"
+    "revision": "0cdd512ed6442cb41ebc",
+    "url": "js/app.2c02809a.js"
   },
   {
     "revision": "17732c6edceb2de157f4",
