@@ -1,35 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2fbbc4c859d85b26c358",
+    "revision": "f875ba013ac93a403818",
     "url": "css/app.61305f6a.css"
   },
   {
     "revision": "f7d081c4706c2fe1d5bd",
     "url": "css/chunk-vendors.a375832e.css"
-  },
-  {
-    "revision": "f882c284e4b36afaf13a3949c8a5df73",
-    "url": "data1/ilListesi.json"
-  },
-  {
-    "revision": "6e839a14257b9f5650b730ad2e3f2c30",
-    "url": "data1/ilceListesi.json"
-  },
-  {
-    "revision": "c83d3f4be5ca1711b2b2138df0773638",
-    "url": "data1/kisiListesi.json"
-  },
-  {
-    "revision": "6129ab453fea77af422f256907527913",
-    "url": "data1/saatListesi.json"
-  },
-  {
-    "revision": "a10e41110c91dfbdf3d04bde17b2cc99",
-    "url": "data1/tarihListesi.json"
-  },
-  {
-    "revision": "89e41174c207db90bf8ff195c711ca16",
-    "url": "data1/uygunIslemTipiListesi.json"
   },
   {
     "revision": "147e3378b44bc9570418b1eece10dd7c",
@@ -112,7 +88,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/turkuaz.png"
   },
   {
-    "revision": "63db89671b8f6669d7138f425c304041",
+    "revision": "9968c8ccede2e2cb26685c302cc3df5f",
     "url": "index.html"
   },
   {
@@ -120,8 +96,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/about.544859fb.js"
   },
   {
-    "revision": "2fbbc4c859d85b26c358",
-    "url": "js/app.cf29cced.js"
+    "revision": "f875ba013ac93a403818",
+    "url": "js/app.91d4ce26.js"
   },
   {
     "revision": "f7d081c4706c2fe1d5bd",
