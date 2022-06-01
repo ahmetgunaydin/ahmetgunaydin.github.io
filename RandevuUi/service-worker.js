@@ -1,4 +1,4 @@
-importScripts("precache-manifest.ac0a4b590016e761d0e8c7ca7ef8c208.js", "workbox-v4.3.1/workbox-sw.js");
+importScripts("precache-manifest.bb07db69edb2b0e764ab5489c8498274.js", "workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "workbox-v4.3.1"});
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
@@ -44,25 +44,30 @@ self.addEventListener('activate', function (event) {
 
 });
 self.addEventListener('notificationclick', event => {
-  event.waitUntil(self.clients.openWindow('/'));
+  event.waitUntil(self.clients.openWindow('/#/siraal'));
 });
+
+
 self.addEventListener('push', function(event) {
+
   console.log('[Service Worker] Push Received.');
-  console.log(`[Service Worker] Push had this data: `,event.data);
+  console.log(`[Service Worker] Push had this data: `,event.data.json());
+  var data= event.data.json();
+
   const timestamp = new Date().getTime() + 10 * 1000;
-  const title = 'Push Codelab';
+  const title = data.Title;
+
+
   const options = {
-    body: "SIRA AL",
-    showTrigger: new TimestampTrigger(timestamp),
+    body: data.Body,
+    //showTrigger: new TimestampTrigger(timestamp),
     icon: "./img/icons/android-chrome-512x512.png",
     vibrate: [200, 100, 200, 100, 200, 100, 200],
-    tag: "vibration-sample",
-    timestamp:new Date().getTime() + 120 * 1000
+    
+    //timestamp:new Date().getTime() + 120 * 1000
   };
-
-  event.waitUntil(setTimeout(() => {
-     self.registration.showNotification(title, options)
-  }, parseInt(event.data.text())+1));
+ 
+  event.waitUntil(self.registration.showNotification(title, options));
 
   
   

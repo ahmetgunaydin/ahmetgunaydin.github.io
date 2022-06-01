@@ -1,8 +1,0 @@
- [
-    { "id": 1,"groupId": 1, "density": 60, "name": "TCKK"  },
-    { "id": 2,"groupId": 1,"density": 60, "name": "Sürücü" },
-    { "id": 3,"groupId": 1,"density": 100, "name": "Pasaport" },
-    { "id": 4,"groupId": 2,"density": 60, "name": "Adres" },
-    { "id": 5,"groupId": 3,"density": 100, "name": "Doğum" },
-    { "id": 6,"groupId": 4,"density": 80, "name": "Diğer İşlemler" }
-  ]
